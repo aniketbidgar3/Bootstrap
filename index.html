@@ -18,9 +18,50 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
       <strong>Welcome</strong> To My Bootstrap Page
     </div>
+
+    <nav class="navbar mx-2 navbar-expand-sm text-bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="javascript:void(0)">Logo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <!-- <span class="navbar-toggler-icon"></span> -->
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto nav nav-pills">
+            <li class="nav-item">
+              <a
+                class="nav-link text-white active"
+                data-bs-toggle="tab"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" data-bs-toggle="tab" href="#menu1"
+                >Menu 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" data-bs-toggle="tab" href="#menu2"
+                >Menu 2</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search" />
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
     <h1 class="text-center mt-3 display-3">Hello World !</h1>
 
-    <div class="card w-25  m-auto mb-5">
+    <div class="card w-25 m-auto mb-5">
       <img
         class="card-img-top"
         src="img_avatar1.png"
@@ -28,12 +69,67 @@
         style="width: 100%"
       />
       <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">
-          Some example text some example text. John Doe is an architect and
-          engineer
-        </p>
-        <a href="#" class="btn btn-primary">See Profile</a>
+        <h4 class="card-title text-center">John Doe</h4>
+
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                Collapsible Group Item #1
+              </a>
+            </div>
+            <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a
+                class="collapsed btn"
+                data-bs-toggle="collapse"
+                href="#collapseTwo"
+              >
+                Collapsible Group Item #2
+              </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a
+                class="collapsed btn"
+                data-bs-toggle="collapse"
+                href="#collapseThree"
+              >
+                Collapsible Group Item #3
+              </a>
+            </div>
+            <div
+              id="collapseThree"
+              class="collapse"
+              data-bs-parent="#accordion"
+            >
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
